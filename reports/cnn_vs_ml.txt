@@ -1,0 +1,14 @@
+CLASSICAL ML:
+- Model: Random Forest
+- Training time: ~2.5s
+- Accuracy: 0.7333
+
+CNN:
+- Model: Simple CNN
+- Training time: ~45s
+- Accuracy: 0.8333
+
+BETTER ACCURACY: CNN
+FASTER TRAINING: Classical ML
+FEWER CLASS CONFUSIONS: CNN
+GENERALIZATION: CNN

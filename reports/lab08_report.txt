@@ -1,1 +1,41 @@
+TASK 13
+
+-Did augmentation improve accuracy?
+It typically does by preventing the model from memorizing specific images, though with very small datasets, the improvement might be subtle.
+
+-Did training become more stable?
+Yes, it helps the loss decrease more consistently across epochs by providing "new" visual variations every time.
+
+-Which classes improved the most?
+Classes with distinct geometric patterns or directional structures, such as River and Residential, tend to improve most as they benefit from learning rotation and flip invariance.
+
+-Why is augmentation useful for satellite imagery?
+Satellites capture terrain from different angles and orbital geometries. Augmentation mimics these real-world changes in sensor orientation and lighting.
+
+
+TASK 14
+
+-Did accuracy improve?
+Yes, accuracy improved from 0.7500 (8 epochs) to 0.8056 (20 epochs), showing that the model benefited from more training time to refine its weights.
+
+-Did loss continue to decrease?
+Yes, the loss generally decreased from 1.0463 in Epoch 1 to 0.2416 in Epoch 20, although it showed some minor fluctuations in later stages (e.g., Epoch 13 and 16).
+
+- Is more training always better?
+o, more training is not always better because it can lead to overfitting, where the model starts memorizing training data instead of learning general features, potentially hurting performance on new data.
+
+
+TASK 15
+
+-Did the deeper model improve performance?
+Yes, the accuracy increased to 0.8333 because the additional convolutional layer allows the network to learn more complex, hierarchical visual features.
+
+-Did training become slower?
+Yes, training time increased because a deeper model has more parameters and requires more computational operations for both forward and backward passes.
+
+-What is the trade-off between model size and performance?
+The trade-off is between accuracy and resource efficiency; larger models typically achieve higher performance but require more memory, power, and time, which is critical for onboard satellite processing.
+
+
+
 git url: https://github.com/ireneferrandez/AI_UBPO_2026_Lab-8

@@ -36,6 +36,30 @@ Yes, training time increased because a deeper model has more parameters and requ
 -What is the trade-off between model size and performance?
 The trade-off is between accuracy and resource efficiency; larger models typically achieve higher performance but require more memory, power, and time, which is critical for onboard satellite processing.
 
+SUBMISSION QUESTIONS
 
+– What is the difference between a flattened image vector and an image tensor?
+A flattened vector is a 1D list that loses spatial context; a tensor is a 3D structure (C, H, W) that preserves pixel geometry and relationships.
+
+– What does a PyTorch Dataset do?
+It is a container that stores and organizes data, defining how to load and transform individual samples and labels.
+
+– What does a DataLoader do?
+It wraps the Dataset to manage data flow, handling batching, shuffling, and parallel loading for training.
+
+– Why are CNNs useful for image data?
+They use filters to automatically detect spatial patterns (edges, textures) regardless of where they appear in the frame.
+
+– What does the model output before the final class is selected?
+It outputs Logits, which are raw, unnormalized scores for each possible category.
+
+– Why can the model classify random or unknown images as one of the known classes?
+Because it is a "closed-world" system; it is mathematically forced to assign the input to whichever known class has the highest score.
+
+– Why can this behavior be dangerous in real orbital AI systems?
+Misidentifying sensor noise or debris as a "known" feature can trigger incorrect autonomous maneuvers or result in critical mission errors.
+
+– What would need to be improved before using such a model operationally?
+Implementation of Out-of-Distribution (OOD) detection (the ability to flag "unknown" data) and uncertainty estimation.
 
 git url: https://github.com/ireneferrandez/AI_UBPO_2026_Lab-8
